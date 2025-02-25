@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { EmployeesContext } from "../../context"; 
 import { Select } from "hrnet-select-p14";
 import { states } from "../../data";
+import './form.css';
 
 import Modal from "../modal/Modal";
 import { createPortal } from "react-dom";
@@ -157,11 +158,13 @@ const Form = () => {
             ]}
             onChange={handleDepartmentSelect}
             defaultValue={selectedDepartment}
-            placeholder="Select Department"
+            placeholder="Sales"
             required
           />
-
-    <button type="submit">Save</button>
+      <div className="container-btn">
+        <button className="btn" type="submit">Save</button>
+      </div>
+    
     {(showModal) ? createPortal(<Modal handleCloseClick={() => setShowModal(false)}/>, document.body) : ''}
     </form>
     </>

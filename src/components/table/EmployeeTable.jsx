@@ -124,6 +124,7 @@ const EmployeeTable = () => {
             <div className="containerSelect">
                 <span>Show</span>
                 <select
+                className="select-show"
                 value={table.getState().pagination.pageSize}
                 onChange={(e) => {
                     table.setPageSize(Number(e.target.value));
@@ -207,13 +208,14 @@ const EmployeeTable = () => {
                         entries</div>
                 </span>
                 <span className="flex items-center gap-1">
-                    <button onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
+                    <button className="pagination-btn" onClick={() => table.previousPage()} disabled={!table.getCanPreviousPage()}>
                         Previous
                     </button>
 
                     {/* Affichage dynamique des numéros de pages */}
                     {Array.from({ length: totalPages }, (_, index) => (
                         <button
+                        id="pagination-number"
                             key={index}
                             onClick={() => table.setPageIndex(index)}
                             className={index === pagination.pageIndex ? "active" : ""}
@@ -222,7 +224,7 @@ const EmployeeTable = () => {
                         </button>
                     ))}
 
-                    <button onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
+                    <button className="pagination-btn" onClick={() => table.nextPage()} disabled={!table.getCanNextPage()}>
                         Next
                     </button>
 
