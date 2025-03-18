@@ -165,7 +165,7 @@ const Form = () => {
         <button className="btn" type="submit">Save</button>
       </div>
     
-    {(showModal) ? createPortal(<Modal handleCloseClick={() => setShowModal(false)}/>, document.body) : ''}
+    {showModal ? createPortal(<Modal handleCloseClick={() => setShowModal(false)}/>, document.body) : ''}
     </form>
     </>
   );

@@ -1,19 +1,17 @@
-import './modal.css'
-//import CloseBtnImage from '../../assets/cross-btn.png'
-
-const Modal = ({handleCloseClick}) => {
-    const onClick = (e) => {
-        e.preventDefault()
-        handleCloseClick()
-    }
+import './modal.css';
 
 
-    return <div className="modal-container">
-        <div className="modal-content">
-            Employee Created!
-            <a href='#' className='modal-close-btn' onClick={onClick}></a>
-        </div>        
-    </div>
-}
+const Modal = ({ handleCloseClick }) => {
+    return (
+        <div className="modal-container">
+            <div className="modal-content">
+                Employee Created!
+                <button className="modal-close-btn" onClick={handleCloseClick} aria-label="Close modal">
+                    ✖
+                </button>
+            </div>        
+        </div>
+    );
+};
 
 export default Modal;

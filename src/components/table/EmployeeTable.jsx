@@ -114,40 +114,40 @@ const EmployeeTable = () => {
         onSortingChange: setSorting,
         enableSortingRemoval: false
     })
-
+    // Calcul du nombre total de pages disponibles 
     const totalPages = table.getPageCount();
 
     return (
         <div className="p-2">
             {isEmpty && <div className="text-center">Aucun employé trouvé!</div>}
-         <div className="containerFilter">
-            <div className="containerSelect">
-                <span>Show</span>
-                <select
-                className="select-show"
-                value={table.getState().pagination.pageSize}
-                onChange={(e) => {
-                    table.setPageSize(Number(e.target.value));
-                }}
-            >
-                {[10, 25, 50, 100].map((pageSize) => (
-                    <option key={pageSize} value={pageSize}>
-                        {pageSize}
-                    </option>
-                ))}
-            </select>
-            <span>entries</span>
+            <div className="containerFilter">
+                <div className="containerSelect">
+                    <span>Show</span>
+                    <select
+                        className="select-show"
+                        value={table.getState().pagination.pageSize}
+                        onChange={(e) => {
+                            table.setPageSize(Number(e.target.value));
+                        }}
+                    >
+                        {[10, 25, 50, 100].map((pageSize) => (
+                            <option key={pageSize} value={pageSize}>
+                                {pageSize}
+                            </option>
+                        ))}
+                    </select>
+                    <span>entries</span>
+                </div>
+
+                <div className="containerSearch">
+                    <span>Search: </span>
+                    <input
+                        value={globalFilter}
+                        onChange={(e) => setGlobalFilter(e.target.value)}
+                    />
+                </div>
             </div>
-         
-            <div className="containerSearch">
-                <span>Search: </span>
-                <input
-                    value={globalFilter}
-                    onChange={(e) => setGlobalFilter(e.target.value)}
-                />
-            </div>
-            </div> 
-           
+            {/* Tableau des employes */}
             <table>
                 <thead>
                     {table.getHeaderGroups().map((headerGroup) => (
@@ -196,6 +196,7 @@ const EmployeeTable = () => {
                     ))}
                 </tfoot>
             </table>
+
             {/* PAGINATION */}
             <div className="flex justify-between items-center gap-2 py-4">
 
@@ -215,7 +216,7 @@ const EmployeeTable = () => {
                     {/* Affichage dynamique des numéros de pages */}
                     {Array.from({ length: totalPages }, (_, index) => (
                         <button
-                        id="pagination-number"
+                            id="pagination-number"
                             key={index}
                             onClick={() => table.setPageIndex(index)}
                             className={index === pagination.pageIndex ? "active" : ""}
