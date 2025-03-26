@@ -1,10 +1,10 @@
 {
   "name": "elodie-p-14",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "description": "Composant React de sélection pour HRnet, conversion d'un plugin jQuery.",
-  "keywords": ["react", "select", "HRnet", "component", "dropdown", "vite", "module"],
+  "keywords": ["react","jQuery", "select", "modal", "datepicker", "table", "HRnet", "component", "vite"],
   "author": "Élodie Allegro",
   "license": "MIT",
   "repository": {
