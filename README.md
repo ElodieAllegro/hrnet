@@ -1,60 +1,77 @@
-HRnet - Application de gestion des employés
+# HRnet - Application de gestion des employés
 
-Description
+## Description
 
 HRnet est une application de gestion des employés développée en React, issue d'une refonte d'une version initiale en jQuery. Elle permet aux utilisateurs d'ajouter de nouveaux employés via un formulaire et de consulter la liste des employés existants.
 
-Fonctionnalités
+## Fonctionnalités
 
-Formulaire d'ajout d'un nouvel employé
+- Formulaire d'ajout d'un nouvel employé
 
-Liste des employés avec filtrage et tri
+- Liste des employés avec filtrage et tri
 
-Interface réactive et performante
+- Interface réactive et performante
 
-Utilisation d'une bibliothèque de composants personnalisés
+- Utilisation d'une bibliothèque de composants personnalisés
 
-Installation
+## Installation
 
 Prérequis
 
-Node.js (version 18 ou supérieure)
+- Node.js (version 18 ou supérieure)
 
-Un gestionnaire de paquets : npm ou yarn
+- Un gestionnaire de paquets : npm ou yarn
 
-Cloner le projet
+### Cloner le projet
 
+```
 git clone https://github.com/ton-utilisateur/hrnet.git
 cd hrnet
 
-Installation des dépendances
+``` 
 
-Avec npm :
+### Installation des dépendances
 
+- Avec npm :
+
+```
 npm install
 
-Avec yarn :
+```
 
+- Avec yarn :
+
+```
 yarn install
 
-Lancer le projet
+```
 
-En mode développement :
+### Lancer le projet En mode développement :
 
+```
 npm run dev
 
-Construire le projet pour la production :
+```
 
+### Construire le projet pour la production :
+
+```
 npm run build
 
-Prévisualiser la version build :
+```
 
+### Prévisualiser la version build :
+
+```
 npm run preview
 
-Documentation
+```
 
-Structure du projet
+## Documentation
 
+- Structure du projet
+
+```
 hrnet/
 │── src/
 │   ├── components/   # Composants réutilisables
@@ -65,37 +82,35 @@ hrnet/
 │── public/           # Assets publics
 │── package.json      # Fichier de configuration du projet
 
-Gestion de l'état
+```
+### Gestion de l'état
 
 L'application utilise React Context API pour la gestion de l'état global.
 
-Déploiement
 
-L'application peut être déployée sur Vercel, Netlify ou tout autre service d'hébergement statique.
+## Contribution
 
-Contribution
+1 Forkez le projet
 
-Forkez le projet
+2 Créez une branche (git checkout -b feature/ma-feature)
 
-Créez une branche (git checkout -b feature/ma-feature)
+3 Commitez vos modifications (git commit -m 'Ajout de ma fonctionnalité')
 
-Commitez vos modifications (git commit -m 'Ajout de ma fonctionnalité')
+4 Poussez la branche (git push origin feature/ma-feature)
 
-Poussez la branche (git push origin feature/ma-feature)
+5 Créez une Pull Request
 
-Créez une Pull Request
+## Auteur
 
-Auteur
+Allegro Élodie - GitHub
 
-Élodie - GitHub
-
-Licence
+## Licence
 
 Ce projet est sous licence MIT.
 
-Liens utiles
+## Liens utiles
 
-Dépôt GitHub
+[Dépôt GitHub](https://github.com/ElodieAllegro/hrnet)
 
-Documentation React
+[Documentation React](https://github.com/ElodieAllegro/hrnet/edit/main/README.md)
 
