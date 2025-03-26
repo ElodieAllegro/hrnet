@@ -76,11 +76,12 @@ hrnet/
 │── src/
 │   ├── components/   # Composants réutilisables
 │   ├── pages/        # Pages principales
-│   ├── hooks/        # Hooks personnalisés
-│   ├── styles/       # Fichiers CSS et styles globaux
-│   ├── utils/        # Fonctions utilitaires
+│   ├── Assets/       # Dossier contenant les ressources du projet
+│   │   ├── context/  # Gestion du contexte global
+│   │   ├── data/     # Données statiques ou mockées
 │── public/           # Assets publics
 │── package.json      # Fichier de configuration du projet
+
 
 ```
 ### Gestion de l'état
